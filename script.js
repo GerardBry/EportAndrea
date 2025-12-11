@@ -879,13 +879,13 @@ const eventsData = {
         title: 'Buwan ng Wika 📚',
         date: 'August 22, 2025',
         images: [
-            'MIDTERMS EVENTS & ACTIVITIES_/Aug. 22, 2025 - BUWAN NG WIKA/1.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Aug. 22, 2025 - BUWAN NG WIKA/2.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Aug. 22, 2025 - BUWAN NG WIKA/3.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Aug. 22, 2025 - BUWAN NG WIKA/4.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Aug. 22, 2025 - BUWAN NG WIKA/5.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Aug. 22, 2025 - BUWAN NG WIKA/6.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Aug. 22, 2025 - BUWAN NG WIKA/7.jpg'
+            'midterms-events/buwan-ng-wika/1.jpg',
+            'midterms-events/buwan-ng-wika/2.jpg',
+            'midterms-events/buwan-ng-wika/3.jpg',
+            'midterms-events/buwan-ng-wika/4.jpg',
+            'midterms-events/buwan-ng-wika/5.jpg',
+            'midterms-events/buwan-ng-wika/6.jpg',
+            'midterms-events/buwan-ng-wika/7.jpg'
         ],
         reflection: `On August 22, 2025, our institution celebrated Buwan ng Wika with the theme "Paglinang sa Filipino at Katutubong Wika: Makasaysayan sa Pagkakaisa ng Bansa." I enjoyed watching the performances, especially the songs, poems, and dances presented by different organizations, and I felt proud that our organization, the Solidarity of Integrated Governance of Mathematicians Association (SIGMA), placed second overall. I noticed how each group used tools such as digital slides, background music, and microphones to make their presentations clearer and more engaging. As a student, this made me more aware that careful planning, proper structure, and the smart use of available tools can turn simple ideas into meaningful presentations that communicate culture, identity, and unity in a more effective way.`
     },
@@ -893,12 +893,12 @@ const eventsData = {
         title: 'DO Day - Research Surveying 🔬',
         date: 'September 3, 2025',
         images: [
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 03, 2025 - DO DAY-RESEARCH SURVEYING IN D.Q/1.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 03, 2025 - DO DAY-RESEARCH SURVEYING IN D.Q/2.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 03, 2025 - DO DAY-RESEARCH SURVEYING IN D.Q/3.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 03, 2025 - DO DAY-RESEARCH SURVEYING IN D.Q/4.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 03, 2025 - DO DAY-RESEARCH SURVEYING IN D.Q/5.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 03, 2025 - DO DAY-RESEARCH SURVEYING IN D.Q/6.jpg'
+            'midterms-events/do-day-research/1.jpg',
+            'midterms-events/do-day-research/2.jpg',
+            'midterms-events/do-day-research/3.jpg',
+            'midterms-events/do-day-research/4.jpg',
+            'midterms-events/do-day-research/5.jpg',
+            'midterms-events/do-day-research/6.jpg'
         ],
         reflection: `On September 3, 2025, while our institution observed Do-Day, my research group and I were assigned to D.Q. Liwag National High School to administer our mathematics-related survey, strictly scheduled within the students' Mathematics periods as required by the school. This arrangement prevented us from returning to Abaño Campus to join the clean-up, so before leaving, we prepared and left cleaning materials as our modest contribution to the activity. The experience made me reflect on how academic commitments and community initiatives can overlap, requiring careful judgment in how we allocate our time and effort.`
     },
@@ -906,10 +906,10 @@ const eventsData = {
         title: 'ICT & AI in Classroom 💻',
         date: 'September 10, 2025',
         images: [
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 10, 2025 - GROUP EXPERIENTIAL LEARNING TASK %231_ USE OF ICT AND AI IN THE CLASSROOM/1.jpeg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 10, 2025 - GROUP EXPERIENTIAL LEARNING TASK %231_ USE OF ICT AND AI IN THE CLASSROOM/2.jpeg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 10, 2025 - GROUP EXPERIENTIAL LEARNING TASK %231_ USE OF ICT AND AI IN THE CLASSROOM/3.jpeg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 10, 2025 - GROUP EXPERIENTIAL LEARNING TASK %231_ USE OF ICT AND AI IN THE CLASSROOM/4.jpg'
+            'midterms-events/experiential-learning/1.jpeg',
+            'midterms-events/experiential-learning/2.jpeg',
+            'midterms-events/experiential-learning/3.jpeg',
+            'midterms-events/experiential-learning/4.jpg'
         ],
         reflection: `Our first experiential learning task on September 10, 2025 involved creating and distributing a Google Forms survey to gather data on teachers' use of ICT and AI in the classroom. I developed the survey form while my groupmates helped disseminate it to various teachers, allowing us to collect responses efficiently. The findings revealed that many educators, especially in rural areas, have limited familiarity with ICT tools, face challenges with insufficient technological resources, and some remain hesitant to use AI due to concerns about overdependence. This experience broadened my understanding of the existing digital gaps within the teaching community and the importance of providing proper support to ensure equitable access to technology. Communicating with my former high school teachers also reminded me how digital platforms strengthen professional connections and simplify collaboration, reinforcing the value of technology when used thoughtfully and responsibly.`
     },
@@ -917,15 +917,15 @@ const eventsData = {
         title: 'Intercollegiate Meet 2025 🏆',
         date: 'September 15-19, 2025',
         images: [
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/1.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/2.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/3.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/4.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/5.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/6.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/7.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/8.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/9.jpeg'
+            'midterms-events/intercollegiate-meet/1.jpg',
+            'midterms-events/intercollegiate-meet/2.jpg',
+            'midterms-events/intercollegiate-meet/3.jpg',
+            'midterms-events/intercollegiate-meet/4.jpg',
+            'midterms-events/intercollegiate-meet/5.jpg',
+            'midterms-events/intercollegiate-meet/6.jpg',
+            'midterms-events/intercollegiate-meet/7.jpg',
+            'midterms-events/intercollegiate-meet/8.jpg',
+            'midterms-events/intercollegiate-meet/9.jpeg'
         ],
         reflection: `The Pasiklaban Intercollegiate Meet 2025, held from September 15 to 19 in Camarines Norte State College, was a vibrant celebration of unity, talent, and school spirit as all nine departments—COED, CANR, COENG, CAS, COTT, CBPA, CFAST, CCMS, and Etienza—gathered to compete in a week-long showcase of skills. The opening day was filled with energy as each department proudly presented its flag, students wore their departmental shirts, and athletes paraded in their colorful uniforms to represent their academic homes. For the next several days, the competitions highlighted the dedication and discipline of the participants, and I genuinely enjoyed watching the events with my classmates as we supported our respective teams. The final day brought great pride to our department when the College of Education (COED) was declared the overall champion, a moment that strengthened my sense of belonging to the department. Reflecting on this experience, I realized that observing teamwork, strategy, and performance in a real-world setting deepened my understanding of how learning extends beyond the classroom: effective teaching, much like successful competitions, requires the thoughtful integration of content, learner needs, motivation, and supportive environment.`
     },
@@ -933,9 +933,9 @@ const eventsData = {
         title: 'A.I Activity 🤖',
         date: 'October 1, 2025',
         images: [
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 01, 2025 - A.I ACTIVITY_/1.png',
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 01, 2025 - A.I ACTIVITY_/2.png',
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 01, 2025 - A.I ACTIVITY_/3.png'
+            'midterms-events/ai-activity/1.png',
+            'midterms-events/ai-activity/2.png',
+            'midterms-events/ai-activity/3.png'
         ],
         reflection: `The AI Activity on October 1, 2025 introduced us to a range of modern digital tools that demonstrate how artificial intelligence can support students in completing academic tasks more efficiently and creatively. Sir Jake presented different AI platforms useful for designing presentations, enhancing images, developing e-portfolios, and producing other digital materials, all of which reflect the growing relevance of technology in the 21st-century learning environment. We explored Gemini, a powerful multimodal AI system capable of processing text, images, audio, video, and code, and I was able to generate sample AI-created photos during the session as you can see on the photos. We also discussed platforms such as Weebly, Wix, Canva, and MagicSchool, which offer accessible ways to design educational content and classroom materials. This experience made me appreciate how essential technological literacy has become for today's learners, as these tools not only simplify complex tasks but also expand opportunities for creativity, problem-solving, and self-directed learning.`
     },
@@ -943,9 +943,9 @@ const eventsData = {
         title: "Teacher's Day 👩‍🏫",
         date: 'October 2, 2025',
         images: [
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 02, 2025 - TEACHER_S DAY/1.jpeg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 02, 2025 - TEACHER_S DAY/2.jpeg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 02, 2025 - TEACHER_S DAY/3.jpeg'
+            'midterms-events/teachers-day/1.jpeg',
+            'midterms-events/teachers-day/2.jpeg',
+            'midterms-events/teachers-day/3.jpeg'
         ],
         reflection: `The Teacher's Day on October 2, 2025 was a simple yet meaningful celebration as our class surprised our adviser, Ma'am Analyn, to express our gratitude for her guidance and support. Sharing this moment with BSED Mathematics 3A reminded me of the positive impact that dedicated teachers have on our growth as students and future educators. The experience deepened my appreciation for the teaching profession and inspired me to carry the same passion, patience, and commitment in my own journey toward becoming a teacher.`
     },
@@ -953,9 +953,9 @@ const eventsData = {
         title: 'Summative Test 📝',
         date: 'October 8, 2025',
         images: [
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 08, 2025 - SUMMATIVE TEST/1.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 08, 2025 - SUMMATIVE TEST/2.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 08, 2025 - SUMMATIVE TEST/3.jpg'
+            'midterms-events/summative-test/1.jpg',
+            'midterms-events/summative-test/2.jpg',
+            'midterms-events/summative-test/3.jpg'
         ],
         reflection: `The Summative Test Examination held on October 8, 2025 served as a meaningful reminder of the value of consistent effort and responsible learning. Knowing that almost all pre-service teachers passed and that Ms. Faye B. Batoon earned the highest score inspired me to stay focused and disciplined in my studies. The careful validation of the test items also highlighted the importance of fairness and reliability in assessments, which is essential in the field of education. This experience encouraged me to evaluate my own progress, strengthen the areas I find challenging, and continue striving toward academic growth and professional excellence.`
     },
@@ -963,9 +963,9 @@ const eventsData = {
         title: 'Midterm Exam 📖',
         date: 'October 10, 2025',
         images: [
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 10, 2025 - MIDTERM EXAM/1.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 10, 2025 - MIDTERM EXAM/2.jpg',
-            'MIDTERMS EVENTS & ACTIVITIES_/Oct. 10, 2025 - MIDTERM EXAM/3.jpg'
+            'midterms-events/midterm-exam/1.jpg',
+            'midterms-events/midterm-exam/2.jpg',
+            'midterms-events/midterm-exam/3.jpg'
         ],
         reflection: `The Midterm Test Examination on October 10, 2025 made me reflect on my own progress and the effort I invested in preparing for it. Seeing the achievements of my classmates, especially the highest score earned by Ms. Janel Irish V. Pasatiempo, encouraged me to acknowledge both my strengths and the areas where I still need improvement. It reminded me that learning is a continuous process that requires focus, discipline, and consistency. This experience motivated me to push myself harder and aim for a higher score in the next examination. I realized that with better study habits, deeper understanding of the lessons, and a stronger commitment to my academic responsibilities, I can achieve better results. Moving forward, I am determined to improve, stay motivated, and strive for excellence in every assessment.`
     },
@@ -975,14 +975,14 @@ const eventsData = {
         title: 'United Nation Celebration 🌍',
         date: 'October 24, 2025',
         images: [
-            'FINALS EVENTS & ACTIVITIES_/Oct. 24, 2025 - United Nation Celebration_/1.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Oct. 24, 2025 - United Nation Celebration_/2.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Oct. 24, 2025 - United Nation Celebration_/3.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Oct. 24, 2025 - United Nation Celebration_/4.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Oct. 24, 2025 - United Nation Celebration_/5.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Oct. 24, 2025 - United Nation Celebration_/6.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Oct. 24, 2025 - United Nation Celebration_/7.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Oct. 24, 2025 - United Nation Celebration_/8.jpg'
+            'finals-events/un-celebration/1.jpg',
+            'finals-events/un-celebration/2.jpg',
+            'finals-events/un-celebration/3.jpg',
+            'finals-events/un-celebration/4.jpg',
+            'finals-events/un-celebration/5.jpg',
+            'finals-events/un-celebration/6.jpg',
+            'finals-events/un-celebration/7.jpg',
+            'finals-events/un-celebration/8.jpg'
         ],
         reflection: `Attending the United Nations Day celebration on October 24, 2025 with the theme "Voices of Tomorrow: Empowering Communities for Global Change" made me reflect deeply on my responsibilities as a future educator. Seeing students use technology—such as digital presentations, background music, videos, and microphones—to share different cultures and global issues showed me how powerful these tools can be in giving learners a voice and helping them understand the world beyond the classroom. As a future teacher, I realized that Technology for Teaching and Learning 1 is not just about learning how to use tools, but about using them with purpose: to promote respect for diversity, encourage critical thinking, and inspire students to participate in solving real-life problems in their communities and in the world. The event reminded me that when I design future lessons and activities, I should use technology not only to make learning attractive, but also to guide my students to become compassionate, informed, and empowered members of a global society.`
     },
@@ -990,8 +990,8 @@ const eventsData = {
         title: 'Mental Health Awareness 🧠',
         date: 'October 30, 2025',
         images: [
-            'FINALS EVENTS & ACTIVITIES_/Oct. 30, 2025 - Mental Health Awareness Webinar/1.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Oct. 30, 2025 - Mental Health Awareness Webinar/2.jpg'
+            'finals-events/mental-health-webinar/1.jpg',
+            'finals-events/mental-health-webinar/2.jpg'
         ],
         reflection: `By attending the "Everyday Actions, Stronger Minds" webinar with the theme "Little Things Matter: Everyday Actions for Mental Health", I realized that caring for mental health is not only about big decisions or formal counseling, but also about the small, consistent choices I make every day. I learned that simple actions like pausing to breathe, checking in on myself and others, setting healthy boundaries, and practicing gratitude can slowly build emotional strength and resilience. The insights shared by Ms. Marie Angelica C. Paz, RPsy, RGC (the resource speaker) helped me understand that it is okay to feel overwhelmed at times, as long as I respond with kindness instead of self-criticism. As a future educator, this reminded me that creating a supportive classroom does not always require grand programs—sometimes, listening, encouraging, and modeling healthy habits can already make a meaningful difference in my students' well-being.`
     },
@@ -999,12 +999,12 @@ const eventsData = {
         title: "Dale's Cone Presentation 📐",
         date: 'November 3, 2025',
         images: [
-            'FINALS EVENTS & ACTIVITIES_/Nov. 03, 2025 - Dale_s Cone of Experience Presentation/1.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 03, 2025 - Dale_s Cone of Experience Presentation/2.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 03, 2025 - Dale_s Cone of Experience Presentation/3.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 03, 2025 - Dale_s Cone of Experience Presentation/4.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 03, 2025 - Dale_s Cone of Experience Presentation/5.jpeg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 03, 2025 - Dale_s Cone of Experience Presentation/6.jpeg'
+            'finals-events/dales-cone/1.jpg',
+            'finals-events/dales-cone/2.jpg',
+            'finals-events/dales-cone/3.jpg',
+            'finals-events/dales-cone/4.jpg',
+            'finals-events/dales-cone/5.jpeg',
+            'finals-events/dales-cone/6.jpeg'
         ],
         reflection: `The Dale's Cone of Experience presentation on November 3, 2025 was quite exhausting and rewarding, especially because only two of us worked on designing and constructing the cone, which truly tested our patience, creativity, and sense of responsibility. I initially felt stressed knowing that some groupmates could not help due to other academic tasks like research, but this was balanced when two of them volunteered to handle the presentation so they could still meaningfully contribute to the group. During the presentation, I appreciated how our group did not just describe Dale's Cone of Experience but also corrected common misconceptions—such as the belief that it is a fixed hierarchy, a precise measure of retention, or a model that promotes passive learning. Instead, they clarified that the cone is only a visual guide that reminds teachers to provide varied, meaningful learning experiences, not a strict formula to follow. This experience strengthened my realization that, as a future educator, I should not be satisfied with appealing visual models alone but must critically examine the true intent behind educational theories and apply them wisely in planning learning activities that are suitable, engaging, and responsive to my students' needs.`
     },
@@ -1012,12 +1012,12 @@ const eventsData = {
         title: 'Research Title Defense 🔬',
         date: 'November 22, 2025',
         images: [
-            'FINALS EVENTS & ACTIVITIES_/Nov. 22, 2025 - Research Title Defense/1.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 22, 2025 - Research Title Defense/2.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 22, 2025 - Research Title Defense/3.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 22, 2025 - Research Title Defense/4.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 22, 2025 - Research Title Defense/5.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Nov. 22, 2025 - Research Title Defense/6.jpg'
+            'finals-events/research-defense/1.jpg',
+            'finals-events/research-defense/2.jpg',
+            'finals-events/research-defense/3.jpg',
+            'finals-events/research-defense/4.jpg',
+            'finals-events/research-defense/5.jpg',
+            'finals-events/research-defense/6.jpg'
         ],
         reflection: `The Research Title Defense on November 22, 2025 marked the peak of a very demanding week, as we juggled multiple requirements while rushing to polish our research paper and finalize the concept of our Algebrazzle Quest Puzzle. With the help of technology—such as online collaboration platforms, shared documents, and digital presentation tools—our team was able to organize ideas more efficiently and transform our initial concept into a clearer, researchable study. During the defense, the panel's questions and recommendations pushed me to think more deeply about how our research could truly address the needs of 21st-century learners, who learn best through interactive, engaging, and learner-centered approaches. When our research title was finally accepted, I felt a strong sense of fulfillment, not only because our hard work was recognized, but also because I realized that this process is training me to become a reflective future educator who uses research and technology to design learning experiences that genuinely support students' growth.`
     },
@@ -1025,7 +1025,7 @@ const eventsData = {
         title: 'Advocacy Video 🎬',
         date: 'November 30, 2025',
         videos: [
-            'FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Advocacy Video (Environmental Concern)/1.mp4'
+            'finals-events/advocacy-video/1.mp4'
         ],
         reflection: `Filming our Environmental Concern Advocacy Video made me realize that environmental issues are deeply connected not only to ordinary citizens like us students, but also to the actions and accountability of those in government. Through the use of digital tools—such as video editing software, online platforms, and social media—we were able to transform our ideas into a powerful message that does not only highlight pollution and environmental degradation, but also calls attention to corruption and unfinished "ghost projects" that harm communities and misuse public resources. As a student, I understood that even small actions, like producing advocacy content, sharing information online, and encouraging others to be more critical and responsible, can contribute to raising awareness and promoting change. This experience strengthened my belief that 21st-century learners are not just passive recipients of information, but active creators of digital content who can use technology to speak up, influence others, and participate meaningfully in nation-building.`
     },
@@ -1033,13 +1033,13 @@ const eventsData = {
         title: 'Week Talk 🎤',
         date: 'December 5, 2025',
         images: [
-            'FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Week Talk (Deal or No Deal)/1.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Week Talk (Deal or No Deal)/2.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Week Talk (Deal or No Deal)/3.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Week Talk (Deal or No Deal)/4.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Week Talk (Deal or No Deal)/5.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Week Talk (Deal or No Deal)/6.jpg',
-            'FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Week Talk (Deal or No Deal)/7.jpg'
+            'finals-events/week-talk/1.jpg',
+            'finals-events/week-talk/2.jpg',
+            'finals-events/week-talk/3.jpg',
+            'finals-events/week-talk/4.jpg',
+            'finals-events/week-talk/5.jpg',
+            'finals-events/week-talk/6.jpg',
+            'finals-events/week-talk/7.jpg'
         ],
         reflection: `The Week Talk (Deal or No Deal) activity was a real emotional rollercoaster for me, especially because I only had about two days to prepare while also trying to finish several pending school requirements. Before my turn, I felt confident that I could answer whatever question I drew, since I had reviewed the lessons and trusted that I had something meaningful to say. However, the moment I was called, nerves started to take over—I suddenly worried that I might experience a mental block as soon as I saw the question. I chose briefcase number 20 because it is connected to my birthday, and the question I picked was: "Remember, it is not the technology tool, but it is the RIGHT BLEND of the THREE KNOWLEDGE AREAS." I was able to answer, but I knew that Sir Jake was looking for a deeper explanation, especially in relation to TCK, PCK, and TPK, and my nervousness held me back from fully elaborating my ideas. This experience made me realize that knowing the content is not enough; I also need to manage my emotions, organize my thoughts clearly, and connect my answers more strongly to key concepts like the TPACK framework. As a future educator, I see this as a valuable lesson to be more prepared, to practice expressing my ideas confidently, and to treat every recitation not just as a requirement, but as training for the kind of presence and clarity I will need in my own classroom someday.`
     }
