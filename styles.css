@@ -1753,9 +1753,204 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 120px 2rem 4rem;
+    padding: 100px 0 0;
     position: relative;
-    background: linear-gradient(180deg, var(--pearl-white) 0%, var(--pale-yellow) 50%, var(--lavender-mist) 100%);
+    background: linear-gradient(135deg, #d4cfc4 0%, #c9c4b8 50%, #bfb9aa 100%);
+    overflow: hidden;
+}
+
+/* Hero Container - Main Layout */
+.hero-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 80vh;
+    position: relative;
+    z-index: 2;
+}
+
+/* Side Photos */
+.hero-side-photo {
+    flex: 0 0 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-side-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(20%) contrast(1.05);
+    transition: filter 0.5s ease;
+}
+
+.hero-side-photo:hover img {
+    filter: grayscale(0%) contrast(1.1);
+}
+
+.hero-side-photo.left-photo {
+    clip-path: inset(0 0 0 0);
+}
+
+.hero-side-photo.right-photo {
+    clip-path: inset(0 0 0 0);
+}
+
+/* Center Content */
+.hero-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, rgba(212, 207, 196, 0.3) 0%, rgba(191, 185, 170, 0.3) 100%);
+}
+
+/* Sun Decoration */
+.sun-decoration {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+}
+
+.sun-svg {
+    width: 100%;
+    height: 100%;
+    color: #2a2a2a;
+}
+
+.sun-rays line {
+    stroke: #2a2a2a;
+    stroke-width: 2;
+}
+
+/* Hero Title */
+.hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #2a2a2a;
+    letter-spacing: 0.02em;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    max-width: 400px;
+}
+
+.hero-subtitle em {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* CTA Button */
+.hero-cta {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #f5f3ef;
+    color: #2a2a2a;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 1px solid #d4cfc4;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-cta:hover {
+    background: #2a2a2a;
+    color: #f5f3ef;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Arch Decorations */
+.arch-left,
+.arch-right {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    background: linear-gradient(180deg, rgba(245, 243, 239, 0.4) 0%, transparent 100%);
+    border-radius: 150px 150px 0 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.arch-left {
+    left: 10%;
+}
+
+.arch-right {
+    right: 10%;
+}
+
+/* Responsive Hero */
+@media (max-width: 1200px) {
+    .hero-side-photo {
+        flex: 0 0 220px;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-side-photo {
+        display: none;
+    }
+    
+    .hero-center {
+        padding: 3rem 2rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .arch-left,
+    .arch-right {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .sun-decoration {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .hero-content {
@@ -2773,7 +2968,8 @@ section {
    ABOUT SECTION - Diary Page Style
 ═══════════════════════════════════════════════════════════════════════════ */
 .about-section {
-    background: linear-gradient(180deg, var(--lavender-mist) 0%, var(--creamy-beige) 100%);
+    background: url('Background/aboutmebg.png') no-repeat center center;
+    background-size: cover;
     position: relative;
     overflow: hidden;
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea V. Romanillos | E-Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&family=Patrick+Hand&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- ═══════════════════════════════════════════════════════════════════ -->
@@ -179,82 +179,59 @@
 
     <!-- Header Section -->
     <header id="home" class="hero">
-        <div class="torn-paper-top"></div>
-        <div class="hero-content">
-            <div class="scrapbook-header">
-                <div class="tape tape-left"></div>
-                <div class="tape tape-right"></div>
-                <h1 class="cutout-title">
-                    <span class="letter l1">A</span><span class="letter l2">n</span><span class="letter l3">d</span><span class="letter l4">r</span><span class="letter l5">e</span><span class="letter l6">a</span>
-                    <span class="letter l7">V</span><span class="letter l8">.</span>
-                    <span class="letter l9">R</span><span class="letter l10">o</span><span class="letter l11">m</span><span class="letter l12">a</span><span class="letter l13">n</span><span class="letter l14">i</span><span class="letter l15">l</span><span class="letter l16">l</span><span class="letter l17">o</span><span class="letter l18">s</span>
-                </h1>
-                <p class="handwritten-subtitle">~ Future Math Educator ~</p>
-                <div class="doodle-border">
-                    <span>♡</span><span>✧</span><span>♡</span><span>✧</span><span>♡</span><span>✧</span><span>♡</span>
-                </div>
+        <div class="hero-container">
+            <!-- Left Photo -->
+            <div class="hero-side-photo left-photo">
+                <img src="About Me/pic1.jpg" alt="Andrea">
             </div>
             
-            <!-- Enhanced Photo Gallery Display -->
-            <div class="hero-photo-gallery">
-                <!-- Left Side Polaroids -->
-                <div class="side-polaroids left-side">
-                    <div class="polaroid mini-polaroid tilt-left animate-float-1">
-                        <div class="polaroid-image">
-                            <img src="About Me/pic1.jpg" alt="Andrea" class="profile-img">
-                        </div>
-                        <p class="polaroid-caption">slay 💅</p>
-                    </div>
-                    <div class="polaroid mini-polaroid tilt-right animate-float-2">
-                        <div class="polaroid-image">
-                            <img src="About Me/pic2.jpg" alt="Andrea" class="profile-img filter-warm">
-                        </div>
-                        <p class="polaroid-caption">vibes ✨</p>
-                    </div>
+            <!-- Center Content -->
+            <div class="hero-center">
+                <!-- Decorative Sun Element -->
+                <div class="sun-decoration">
+                    <svg viewBox="0 0 100 100" class="sun-svg">
+                        <circle cx="50" cy="50" r="15" fill="currentColor"/>
+                        <g class="sun-rays">
+                            <line x1="50" y1="5" x2="50" y2="25"/>
+                            <line x1="50" y1="75" x2="50" y2="95"/>
+                            <line x1="5" y1="50" x2="25" y2="50"/>
+                            <line x1="75" y1="50" x2="95" y2="50"/>
+                            <line x1="18" y1="18" x2="32" y2="32"/>
+                            <line x1="68" y1="68" x2="82" y2="82"/>
+                            <line x1="82" y1="18" x2="68" y2="32"/>
+                            <line x1="32" y1="68" x2="18" y2="82"/>
+                            <line x1="50" y1="0" x2="50" y2="15"/>
+                            <line x1="50" y1="85" x2="50" y2="100"/>
+                            <line x1="0" y1="50" x2="15" y2="50"/>
+                            <line x1="85" y1="50" x2="100" y2="50"/>
+                        </g>
+                    </svg>
                 </div>
                 
-                <!-- Main Center Polaroid -->
-                <div class="hero-polaroid">
-                    <div class="polaroid main-polaroid glow-effect">
-                        <div class="polaroid-image">
-                            <img src="About Me/formalphotoofme.jpg" alt="Andrea V. Romanillos" class="profile-img">
-                        </div>
-                        <p class="polaroid-caption">dreamy ✨</p>
-                        <div class="polaroid-sparkles">
-                            <span>✨</span><span>💜</span><span>✨</span>
-                        </div>
-                    </div>
-                    <div class="floating-hearts">
-                        <span class="mini-heart">💗</span>
-                        <span class="mini-heart">💜</span>
-                        <span class="mini-heart">💕</span>
-                    </div>
-                </div>
+                <!-- Title -->
+                <h1 class="hero-title">Andrea Romanillos</h1>
                 
-                <!-- Right Side Polaroids -->
-                <div class="side-polaroids right-side">
-                    <div class="polaroid mini-polaroid tilt-right animate-float-3">
-                        <div class="polaroid-image">
-                            <img src="About Me/pic3.jpg" alt="Andrea" class="profile-img filter-cool">
-                        </div>
-                        <p class="polaroid-caption">purple haze 💜</p>
-                    </div>
-                    <div class="polaroid mini-polaroid tilt-left animate-float-4">
-                        <div class="polaroid-image">
-                            <img src="About Me/pic4.jpg" alt="Andrea" class="profile-img filter-vintage">
-                        </div>
-                        <p class="polaroid-caption">aesthetic 🦋</p>
-                    </div>
-                </div>
+                <!-- Subtitle -->
+                <p class="hero-subtitle">
+                    Aspiring Mathematics Educator with a passion<br>
+                    for nurturing young minds and inspiring<br>
+                    a love for numbers and problem-solving.<br>
+                    <em>Building the future, one equation at a time.</em>
+                </p>
+                
+                <!-- CTA Button -->
+                <a href="#about" class="hero-cta">LEARN MORE</a>
             </div>
             
-            <div class="sticker-decoration">
-                <span class="deco-sticker">🦋</span>
-                <span class="deco-sticker">💜</span>
-                <span class="deco-sticker">⭐</span>
+            <!-- Right Photo -->
+            <div class="hero-side-photo right-photo">
+                <img src="About Me/formalphotoofme.jpg" alt="Andrea">
             </div>
         </div>
-        <div class="torn-paper-bottom"></div>
+        
+        <!-- Decorative arch elements -->
+        <div class="arch-left"></div>
+        <div class="arch-right"></div>
     </header>
 
     <!-- About Section -->
