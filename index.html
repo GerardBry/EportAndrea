@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea V. Romanillos | E-Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- MUSIC INTRO SCREEN - Now Playing -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="music-intro" id="musicIntro">
+        <div class="music-particles" id="musicParticles"></div>
+        <div class="music-content">
+            <div class="vinyl-container">
+                <div class="vinyl-record">
+                    <div class="vinyl-label">
+                        <span class="vinyl-text">💜</span>
+                    </div>
+                </div>
+                <div class="vinyl-arm"></div>
+            </div>
+            <div class="now-playing-text">
+                <p class="now-playing-label">✨ Now Playing ✨</p>
+                <h2 class="song-title">good 4 u</h2>
+                <p class="artist-name">Olivia Rodrigo</p>
+                <div class="music-bars">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <button class="play-btn" id="playMusicBtn">
+                <span class="play-icon">▶</span>
+                <span class="play-text">Play</span>
+            </button>
+            <p class="music-hint">Click to play and continue ✨</p>
+        </div>
+        <div class="music-notes">
+            <span class="music-note n1">🎵</span>
+            <span class="music-note n2">🎶</span>
+            <span class="music-note n3">💜</span>
+            <span class="music-note n4">🎵</span>
+            <span class="music-note n5">✨</span>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bgMusic" loop>
+        <source src="Song/Goodforyou.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- WELCOME INTRO SCREEN -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="intro-overlay hidden" id="introOverlay">
+        <div class="intro-particles" id="introParticles"></div>
+        <div class="intro-content">
+            <div class="intro-photo-frame">
+                <div class="intro-glow"></div>
+                <div class="intro-ring ring-1"></div>
+                <div class="intro-ring ring-2"></div>
+                <div class="intro-ring ring-3"></div>
+                <div class="intro-photo">
+                    <img src="About Me/formalphotoofme.jpg" alt="Andrea V. Romanillos">
+                </div>
+                <div class="intro-sparkles">
+                    <span class="intro-sparkle s1">✨</span>
+                    <span class="intro-sparkle s2">💜</span>
+                    <span class="intro-sparkle s3">⭐</span>
+                    <span class="intro-sparkle s4">🦋</span>
+                    <span class="intro-sparkle s5">💗</span>
+                    <span class="intro-sparkle s6">✨</span>
+                </div>
+            </div>
+            <div class="intro-text">
+                <p class="intro-greeting">
+                    <span class="wave-emoji">👋</span> Hello, I'm
+                </p>
+                <h1 class="intro-name">
+                    <span class="name-letter">A</span><span class="name-letter">n</span><span class="name-letter">d</span><span class="name-letter">r</span><span class="name-letter">e</span><span class="name-letter">a</span>
+                </h1>
+                <p class="intro-tagline">
+                    <span class="tagline-icon">📚</span>
+                    <span class="tagline-text">Your Future Educator</span>
+                    <span class="tagline-icon">✨</span>
+                </p>
+                <div class="intro-decorations">
+                    <span>🦋</span><span>💜</span><span>⭐</span><span>💗</span><span>🦋</span>
+                </div>
+            </div>
+            <button class="intro-enter-btn" id="enterBtn">
+                <span class="btn-text">Enter My Portfolio</span>
+                <span class="btn-icon">→</span>
+                <span class="btn-sparkle">✨</span>
+            </button>
+            <div class="intro-skip">
+                <span class="skip-text">or press any key to continue</span>
+            </div>
+        </div>
+        <div class="intro-butterflies">
+            <span class="intro-butterfly ib1">🦋</span>
+            <span class="intro-butterfly ib2">🦋</span>
+            <span class="intro-butterfly ib3">🦋</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- MAIN CONTENT WRAPPER -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="main-content" id="mainContent">
+    
+    <!-- Magical Floating Elements Background -->
+    <div class="floating-stickers">
+        <span class="sticker butterfly fly-1">🦋</span>
+        <span class="sticker butterfly fly-2">🦋</span>
+        <span class="sticker butterfly fly-3">🦋</span>
+        <span class="sticker butterfly fly-4">🦋</span>
+        <span class="sticker butterfly fly-5">🦋</span>
+        <span class="sticker star twinkle-1">⭐</span>
+        <span class="sticker star twinkle-2">⭐</span>
+        <span class="sticker star twinkle-3">✨</span>
+        <span class="sticker heart float-1">💜</span>
+        <span class="sticker heart float-2">💗</span>
+        <span class="sticker heart float-3">💕</span>
+        <span class="sticker flower bloom-1">🌸</span>
+        <span class="sticker flower bloom-2">🌷</span>
+        <span class="sticker sparkle glitter-1">✨</span>
+        <span class="sticker sparkle glitter-2">💫</span>
+        <span class="sticker sparkle glitter-3">⭐</span>
+    </div>
+
+    <!-- Sparkle Particles -->
+    <div class="sparkle-container" id="sparkles"></div>
+
+    <!-- Floating Bubbles -->
+    <div class="bubble-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">✨ Andrea ✨</span>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Me</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="music-toggle-item">
+                    <button class="music-toggle-btn" id="musicToggleBtn" title="Toggle Music">
+                        <span class="music-icon playing">🎵</span>
+                        <span class="music-icon muted">🔇</span>
+                        <span class="toggle-text">Music</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home" class="hero">
+        <div class="torn-paper-top"></div>
+        <div class="hero-content">
+            <div class="scrapbook-header">
+                <div class="tape tape-left"></div>
+                <div class="tape tape-right"></div>
+                <h1 class="cutout-title">
+                    <span class="letter l1">A</span><span class="letter l2">n</span><span class="letter l3">d</span><span class="letter l4">r</span><span class="letter l5">e</span><span class="letter l6">a</span>
+                    <span class="letter l7">V</span><span class="letter l8">.</span>
+                    <span class="letter l9">R</span><span class="letter l10">o</span><span class="letter l11">m</span><span class="letter l12">a</span><span class="letter l13">n</span><span class="letter l14">i</span><span class="letter l15">l</span><span class="letter l16">l</span><span class="letter l17">o</span><span class="letter l18">s</span>
+                </h1>
+                <p class="handwritten-subtitle">~ Future Math Educator ~</p>
+                <div class="doodle-border">
+                    <span>♡</span><span>✧</span><span>♡</span><span>✧</span><span>♡</span><span>✧</span><span>♡</span>
+                </div>
+            </div>
+            
+            <!-- Enhanced Photo Gallery Display -->
+            <div class="hero-photo-gallery">
+                <!-- Left Side Polaroids -->
+                <div class="side-polaroids left-side">
+                    <div class="polaroid mini-polaroid tilt-left animate-float-1">
+                        <div class="polaroid-image">
+                            <img src="About Me/pic1.jpg" alt="Andrea" class="profile-img">
+                        </div>
+                        <p class="polaroid-caption">slay 💅</p>
+                    </div>
+                    <div class="polaroid mini-polaroid tilt-right animate-float-2">
+                        <div class="polaroid-image">
+                            <img src="About Me/pic2.jpg" alt="Andrea" class="profile-img filter-warm">
+                        </div>
+                        <p class="polaroid-caption">vibes ✨</p>
+                    </div>
+                </div>
+                
+                <!-- Main Center Polaroid -->
+                <div class="hero-polaroid">
+                    <div class="polaroid main-polaroid glow-effect">
+                        <div class="polaroid-image">
+                            <img src="About Me/formalphotoofme.jpg" alt="Andrea V. Romanillos" class="profile-img">
+                        </div>
+                        <p class="polaroid-caption">dreamy ✨</p>
+                        <div class="polaroid-sparkles">
+                            <span>✨</span><span>💜</span><span>✨</span>
+                        </div>
+                    </div>
+                    <div class="floating-hearts">
+                        <span class="mini-heart">💗</span>
+                        <span class="mini-heart">💜</span>
+                        <span class="mini-heart">💕</span>
+                    </div>
+                </div>
+                
+                <!-- Right Side Polaroids -->
+                <div class="side-polaroids right-side">
+                    <div class="polaroid mini-polaroid tilt-right animate-float-3">
+                        <div class="polaroid-image">
+                            <img src="About Me/pic3.jpg" alt="Andrea" class="profile-img filter-cool">
+                        </div>
+                        <p class="polaroid-caption">purple haze 💜</p>
+                    </div>
+                    <div class="polaroid mini-polaroid tilt-left animate-float-4">
+                        <div class="polaroid-image">
+                            <img src="About Me/pic4.jpg" alt="Andrea" class="profile-img filter-vintage">
+                        </div>
+                        <p class="polaroid-caption">aesthetic 🦋</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sticker-decoration">
+                <span class="deco-sticker">🦋</span>
+                <span class="deco-sticker">💜</span>
+                <span class="deco-sticker">⭐</span>
+            </div>
+        </div>
+        <div class="torn-paper-bottom"></div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="cutout-word">About</span>
+                <span class="handwritten-word">the Author</span>
+            </h2>
+            <div class="sticker-row">
+                <span>💗</span><span>✨</span><span>🦋</span>
+            </div>
+        </div>
+
+        <!-- Model-Style Photo Gallery -->
+        <div class="model-gallery">
+            <!-- Main Feature Photo (Big One) -->
+            <div class="model-main-photo">
+                <div class="main-photo-frame">
+                    <div class="frame-decoration top-left">✨</div>
+                    <div class="frame-decoration top-right">🦋</div>
+                    <div class="frame-decoration bottom-left">💜</div>
+                    <div class="frame-decoration bottom-right">💗</div>
+                    <img src="About Me/formalphotoofme.jpg" alt="Andrea - Main Photo">
+                    <div class="photo-overlay">
+                        <span class="overlay-text">Andrea ✨</span>
+                    </div>
+                </div>
+                <p class="main-photo-caption">~ the main character ~</p>
+            </div>
+
+            <!-- Side Photos Grid -->
+            <div class="model-side-photos">
+                <!-- Top Row -->
+                <div class="side-photo-row">
+                    <div class="model-photo small tilt-left">
+                        <img src="About Me/pic1.jpg" alt="Andrea pic 1">
+                        <span class="photo-tag">mood 💜</span>
+                    </div>
+                    <div class="model-photo medium tilt-right">
+                        <img src="About Me/pic2.jpg" alt="Andrea pic 2">
+                        <span class="photo-tag">slay ✨</span>
+                    </div>
+                </div>
+                <!-- Bottom Row -->
+                <div class="side-photo-row">
+                    <div class="model-photo medium tilt-left">
+                        <img src="About Me/pic3.jpg" alt="Andrea pic 3">
+                        <span class="photo-tag">iconic 🦋</span>
+                    </div>
+                    <div class="model-photo small tilt-right">
+                        <img src="About Me/pic4.jpg" alt="Andrea pic 4">
+                        <span class="photo-tag">vibes 💗</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Photo Strip -->
+        <div class="model-strip">
+            <div class="strip-label">📸 more moments</div>
+            <div class="model-strip-photos">
+                <div class="strip-item">
+                    <img src="About Me/pic5.jpg" alt="Andrea pic 5">
+                </div>
+                <div class="strip-item">
+                    <img src="About Me/pic1.jpg" alt="Andrea pic 1">
+                </div>
+                <div class="strip-item">
+                    <img src="About Me/pic2.jpg" alt="Andrea pic 2">
+                </div>
+                <div class="strip-item featured">
+                    <img src="About Me/formalphotoofme.jpg" alt="Andrea featured">
+                    <span class="featured-badge">⭐</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Photo Decorations -->
+        <div class="floating-photo-decor">
+            <span class="photo-decor d1">📷</span>
+            <span class="photo-decor d2">🎀</span>
+            <span class="photo-decor d3">💫</span>
+        </div>
+        
+        <div class="diary-page">
+            <div class="tape tape-center"></div>
+            <div class="diary-lines">
+                <h3 class="diary-heading">Who Is She? 💜</h3>
+                <p class="diary-text">
+                    Hello, everyone! ✨
+                </p>
+                <p class="diary-text">
+                    I am <strong>Andrea V. Romanillos</strong>, a 21-year-old third-year college student pursuing a Bachelor of Secondary Education Major in Mathematics at Camarines Norte State College – Abaño Campus.
+                </p>
+                <p class="diary-text">
+                    As the cheerful and determined youngest daughter of Mr. Antonio A. Romanillos and Mrs. Grace V. Romanillos, I grew up embracing the values of perseverance, responsibility, and excellence. 💪
+                </p>
+                <p class="diary-text">
+                    These values have shaped me into a motivated learner who approaches challenges with optimism and purpose. Engaging with mathematics has strengthened my appreciation for its order, reasoning, and real-world significance. 📐✨
+                </p>
+                <p class="diary-text">
+                    These qualities inspire me to prepare for a future in education where I can support learners through thoughtful and well-designed instruction. 🎓💜
+                </p>
+            </div>
+            <div class="diary-doodles">
+                <span class="doodle">♡</span>
+                <span class="doodle">★</span>
+                <span class="doodle">~</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Torn Paper Divider -->
+    <div class="torn-divider"></div>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="cutout-word">Education</span>
+                <span class="handwritten-word">& Journey</span>
+            </h2>
+            <div class="sticker-row">
+                <span>📚</span><span>✨</span><span>🎓</span>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="polaroid small-polaroid">
+                    <div class="polaroid-image">
+                        <div class="placeholder-image">🎓</div>
+                    </div>
+                    <p class="polaroid-caption">CNSC</p>
+                </div>
+                <div class="timeline-content">
+                    <h3>Camarines Norte State College – Abaño Campus</h3>
+                    <p class="degree">Bachelor of Secondary Education Major in Mathematics</p>
+                    <p class="year">2023 – Present</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="polaroid small-polaroid">
+                    <div class="polaroid-image">
+                        <div class="placeholder-image">🔬</div>
+                    </div>
+                    <p class="polaroid-caption">STEM</p>
+                </div>
+                <div class="timeline-content">
+                    <h3>Vinzons Pilot High School</h3>
+                    <p class="degree">Science, Technology, Engineering, and Mathematics (STEM)</p>
+                    <p class="year">2021 – 2023</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="polaroid small-polaroid">
+                    <div class="polaroid-image">
+                        <div class="placeholder-image">⚙️</div>
+                    </div>
+                    <p class="polaroid-caption">STE</p>
+                </div>
+                <div class="timeline-content">
+                    <h3>Moreno Integrated School</h3>
+                    <p class="degree">Science, Technology, and Engineering (STE)</p>
+                    <p class="year">2017 – 2021</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="polaroid small-polaroid">
+                    <div class="polaroid-image">
+                        <div class="placeholder-image">📖</div>
+                    </div>
+                    <p class="polaroid-caption">Elementary</p>
+                </div>
+                <div class="timeline-content">
+                    <h3>San Luis Elementary School</h3>
+                    <p class="degree">Primary Education</p>
+                    <p class="year">2011 – 2017</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Affiliations -->
+        <div class="affiliations-box">
+            <div class="tape tape-left"></div>
+            <h3 class="affiliation-title">✨ Affiliations ✨</h3>
+            <div class="affiliation-item">
+                <p class="org-name">Solidarity of Integrated Governance of Mathematicians Association (SIGMA)</p>
+                <p class="org-role">Member | 2023 – Present</p>
+            </div>
+            <div class="affiliation-item">
+                <p class="org-name">National Service Training Program – Literacy Training Service (NSTP–LTS)</p>
+                <p class="org-role">Business Manager | 2023 – 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- EVENTS & ACTIVITIES SECTION -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="cutout-word">My</span>
+                <span class="handwritten-word">Events & Activities</span>
+            </h2>
+            <div class="sticker-row">
+                <span>📷</span><span>✨</span><span>🦋</span>
+            </div>
+        </div>
+
+        <!-- Term Tabs -->
+        <div class="term-tabs">
+            <button class="term-tab active" data-term="midterms">
+                <span class="tab-icon">📚</span>
+                <span class="tab-text">Midterms</span>
+            </button>
+            <button class="term-tab" data-term="finals">
+                <span class="tab-icon">🎓</span>
+                <span class="tab-text">Finals</span>
+            </button>
+        </div>
+
+        <!-- Click instruction -->
+        <p class="gallery-instruction">✨ Click on any event to view photos and my reflection ✨</p>
+
+        <!-- MIDTERMS Event Cards Container -->
+        <div class="events-container" id="midterms-events">
+            
+            <!-- Midterm Event 1: Aug 22 - Buwan ng Wika -->
+            <div class="event-card" data-event="buwan-wika" onclick="openEventModal('buwan-wika')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">22</span>
+                        <span class="date-month">AUG</span>
+                    </div>
+                    <h3 class="event-title">Buwan ng Wika 📚</h3>
+                    <p class="event-description">Celebrating Filipino Language and Culture</p>
+                </div>
+                <div class="event-preview">
+                    <img src="MIDTERMS EVENTS & ACTIVITIES_/Aug. 22, 2025 - BUWAN NG WIKA/1.jpg" alt="Buwan ng Wika">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midterm Event 2: Sept 03 - DO Day Research Surveying -->
+            <div class="event-card" data-event="do-day" onclick="openEventModal('do-day')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">03</span>
+                        <span class="date-month">SEPT</span>
+                    </div>
+                    <h3 class="event-title">DO Day - Research Surveying 🔬</h3>
+                    <p class="event-description">Research surveying activity in D.Q</p>
+                </div>
+                <div class="event-preview">
+                    <img src="MIDTERMS EVENTS & ACTIVITIES_/Sept. 03, 2025 - DO DAY-RESEARCH SURVEYING IN D.Q/1.jpg" alt="DO Day">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midterm Event 3: Sept 10 - Group Experiential Learning -->
+            <div class="event-card" data-event="ict-ai" onclick="openEventModal('ict-ai')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">10</span>
+                        <span class="date-month">SEPT</span>
+                    </div>
+                    <h3 class="event-title">ICT & AI in Classroom 💻</h3>
+                    <p class="event-description">Group Experiential Learning Task - Use of ICT and AI</p>
+                </div>
+                <div class="event-preview">
+                    <img src="MIDTERMS EVENTS & ACTIVITIES_/Sept. 10, 2025 - GROUP EXPERIENTIAL LEARNING TASK %231_ USE OF ICT AND AI IN THE CLASSROOM/1.jpeg" alt="ICT Activity">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midterm Event 4: Sept 15-19 - Intercollegiate Meet -->
+            <div class="event-card" data-event="intrams" onclick="openEventModal('intrams')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">15-19</span>
+                        <span class="date-month">SEPT</span>
+                    </div>
+                    <h3 class="event-title">Intercollegiate Meet 2025 🏆</h3>
+                    <p class="event-description">Sports and academic competition between colleges</p>
+                </div>
+                <div class="event-preview">
+                    <img src="MIDTERMS EVENTS & ACTIVITIES_/Sept. 15 - 19, 2025 - INTERCOLLEGIATE MEET 2025/1.jpg" alt="Intercollegiate Meet">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midterm Event 5: Oct 01 - AI Activity -->
+            <div class="event-card" data-event="ai-activity" onclick="openEventModal('ai-activity')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">01</span>
+                        <span class="date-month">OCT</span>
+                    </div>
+                    <h3 class="event-title">A.I Activity 🤖</h3>
+                    <p class="event-description">Exploring Artificial Intelligence in Education</p>
+                </div>
+                <div class="event-preview">
+                    <img src="MIDTERMS EVENTS & ACTIVITIES_/Oct. 01, 2025 - A.I ACTIVITY_/1.png" alt="AI Activity">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midterm Event 6: Oct 02 - Teacher's Day -->
+            <div class="event-card" data-event="teachers-day" onclick="openEventModal('teachers-day')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">02</span>
+                        <span class="date-month">OCT</span>
+                    </div>
+                    <h3 class="event-title">Teacher's Day 👩‍🏫</h3>
+                    <p class="event-description">Celebrating and honoring our beloved teachers</p>
+                </div>
+                <div class="event-preview">
+                    <img src="MIDTERMS EVENTS & ACTIVITIES_/Oct. 02, 2025 - TEACHER_S DAY/1.jpeg" alt="Teachers Day">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midterm Event 7: Oct 08 - Summative Test -->
+            <div class="event-card" data-event="summative-test" onclick="openEventModal('summative-test')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">08</span>
+                        <span class="date-month">OCT</span>
+                    </div>
+                    <h3 class="event-title">Summative Test 📝</h3>
+                    <p class="event-description">Assessment and evaluation period</p>
+                </div>
+                <div class="event-preview">
+                    <img src="MIDTERMS EVENTS & ACTIVITIES_/Oct. 08, 2025 - SUMMATIVE TEST/1.jpg" alt="Summative Test">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midterm Event 8: Oct 10 - Midterm Exam -->
+            <div class="event-card" data-event="midterm-exam" onclick="openEventModal('midterm-exam')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">10</span>
+                        <span class="date-month">OCT</span>
+                    </div>
+                    <h3 class="event-title">Midterm Exam 📖</h3>
+                    <p class="event-description">Midterm examination period</p>
+                </div>
+                <div class="event-preview">
+                    <img src="MIDTERMS EVENTS & ACTIVITIES_/Oct. 10, 2025 - MIDTERM EXAM/1.jpg" alt="Midterm Exam">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FINALS Event Cards Container -->
+        <div class="events-container hidden" id="finals-events">
+            
+            <!-- Finals Event 1: Oct 24 - United Nation Celebration -->
+            <div class="event-card" data-event="un-celebration" onclick="openEventModal('un-celebration')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">24</span>
+                        <span class="date-month">OCT</span>
+                    </div>
+                    <h3 class="event-title">United Nation Celebration 🌍</h3>
+                    <p class="event-description">Voices of Tomorrow: Empowering Communities for Global Change</p>
+                </div>
+                <div class="event-preview">
+                    <img src="FINALS EVENTS & ACTIVITIES_/Oct. 24, 2025 - United Nation Celebration_/1.jpg" alt="UN Celebration">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finals Event 2: Oct 30 - Mental Health Awareness Webinar -->
+            <div class="event-card" data-event="mental-health" onclick="openEventModal('mental-health')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">30</span>
+                        <span class="date-month">OCT</span>
+                    </div>
+                    <h3 class="event-title">Mental Health Awareness 🧠</h3>
+                    <p class="event-description">Little Things Matter: Everyday Actions for Mental Health</p>
+                </div>
+                <div class="event-preview">
+                    <img src="FINALS EVENTS & ACTIVITIES_/Oct. 30, 2025 - Mental Health Awareness Webinar/1.jpg" alt="Mental Health Webinar">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finals Event 3: Nov 03 - Dale's Cone of Experience -->
+            <div class="event-card" data-event="dales-cone" onclick="openEventModal('dales-cone')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">03</span>
+                        <span class="date-month">NOV</span>
+                    </div>
+                    <h3 class="event-title">Dale's Cone Presentation 📐</h3>
+                    <p class="event-description">Understanding Edgar Dale's Cone of Experience</p>
+                </div>
+                <div class="event-preview">
+                    <img src="FINALS EVENTS & ACTIVITIES_/Nov. 03, 2025 - Dale_s Cone of Experience Presentation/1.jpg" alt="Dale's Cone">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finals Event 4: Nov 22 - Research Title Defense -->
+            <div class="event-card" data-event="research-defense" onclick="openEventModal('research-defense')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">22</span>
+                        <span class="date-month">NOV</span>
+                    </div>
+                    <h3 class="event-title">Research Title Defense 🔬</h3>
+                    <p class="event-description">Algebrazzle Quest Puzzle Research Defense</p>
+                </div>
+                <div class="event-preview">
+                    <img src="FINALS EVENTS & ACTIVITIES_/Nov. 22, 2025 - Research Title Defense/1.jpg" alt="Research Defense">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finals Event 5: Dec 5 - Advocacy Video -->
+            <div class="event-card" data-event="advocacy-video" onclick="openEventModal('advocacy-video')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">05</span>
+                        <span class="date-month">DEC</span>
+                    </div>
+                    <h3 class="event-title">Advocacy Video 🎬</h3>
+                    <p class="event-description">Environmental Concern - Creating Digital Advocacy</p>
+                </div>
+                <div class="event-preview">
+                    <video src="FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Advocacy Video (Environmental Concern)/1.mp4" muted></video>
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 🎬</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finals Event 6: Dec 5 - Week Talk -->
+            <div class="event-card" data-event="week-talk" onclick="openEventModal('week-talk')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">05</span>
+                        <span class="date-month">DEC</span>
+                    </div>
+                    <h3 class="event-title">Week Talk 🎤</h3>
+                    <p class="event-description">Deal or No Deal - TPACK Framework Discussion</p>
+                </div>
+                <div class="event-preview">
+                    <img src="FINALS EVENTS & ACTIVITIES_/Dec. 5, 2025 - Week Talk (Deal or No Deal)/1.jpg" alt="Week Talk">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="gallery-stickers">
+            <span class="gallery-sticker">🦋</span>
+            <span class="gallery-sticker">⭐</span>
+            <span class="gallery-sticker">💜</span>
+            <span class="gallery-sticker">✨</span>
+        </div>
+    </section>
+
+    <!-- Event Modal -->
+    <div class="event-modal" id="eventModal">
+        <div class="modal-overlay" onclick="closeEventModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeEventModal()">×</button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Event Title</h2>
+                <p class="modal-date" id="modalDate">Date</p>
+            </div>
+
+            <div class="modal-body">
+                <!-- Photo Slideshow -->
+                <div class="modal-slideshow">
+                    <div class="modal-slides" id="modalSlides">
+                        <!-- Slides will be populated by JavaScript -->
+                    </div>
+                    <button class="modal-nav prev" onclick="changeModalSlide(-1)">❮</button>
+                    <button class="modal-nav next" onclick="changeModalSlide(1)">❯</button>
+                    <div class="modal-dots" id="modalDots">
+                        <!-- Dots will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Reflection Section -->
+                <div class="modal-reflection">
+                    <h3 class="reflection-title">📝 My Reflection</h3>
+                    <div class="reflection-content" id="modalReflection">
+                        <!-- Reflection will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Torn Paper Divider -->
+    <div class="torn-divider reverse"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="cutout-word">Get In</span>
+                <span class="handwritten-word">Touch!</span>
+            </h2>
+            <div class="sticker-row">
+                <span>💌</span><span>✨</span><span>💜</span>
+            </div>
+        </div>
+
+        <div class="contact-cards">
+            <a href="mailto:andrearomanillos.04@gmail.com" class="contact-card sticker-btn">
+                <span class="contact-icon">📧</span>
+                <span class="contact-label">Email</span>
+                <span class="contact-info">andrearomanillos.04@gmail.com</span>
+            </a>
+            <a href="tel:09678800931" class="contact-card sticker-btn">
+                <span class="contact-icon">📱</span>
+                <span class="contact-label">Phone</span>
+                <span class="contact-info">0967-880-0931</span>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="contact-card sticker-btn">
+                <span class="contact-icon">💙</span>
+                <span class="contact-label">Facebook</span>
+                <span class="contact-info">Andrea Valencia</span>
+            </a>
+            <a href="https://instagram.com/xthallia_" target="_blank" class="contact-card sticker-btn">
+                <span class="contact-icon">💗</span>
+                <span class="contact-label">Instagram</span>
+                <span class="contact-info">@xthallia_</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-decoration">
+            <span>✨</span><span>🦋</span><span>💜</span><span>⭐</span><span>💗</span><span>✨</span><span>🦋</span><span>💜</span><span>⭐</span><span>💗</span>
+        </div>
+        <p class="footer-text">Made with 💜 by Andrea V. Romanillos</p>
+        <p class="footer-year">© 2025 | Sour Cream Aesthetic ✨</p>
+        <div class="footer-decoration">
+            <span>💗</span><span>⭐</span><span>💜</span><span>🦋</span><span>✨</span><span>💗</span><span>⭐</span><span>💜</span><span>🦋</span><span>✨</span>
+        </div>
+    </footer>
+
+    </div><!-- End of Main Content Wrapper -->
+
+    <script src="script.js"></script>
+</body>
+</html>
