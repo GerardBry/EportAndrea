@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrea V. Romanillos | E-Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&family=Patrick+Hand&family=Special+Elite&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- ═══════════════════════════════════════════════════════════════════ -->
@@ -53,6 +53,36 @@
     <audio id="bgMusic" loop>
         <source src="Song/Goodforyou.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- FLOATING MUSIC PLAYER -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <div class="floating-music-player" id="floatingPlayer">
+        <div class="player-vinyl">
+            <div class="mini-vinyl">
+                <div class="vinyl-center">💜</div>
+            </div>
+        </div>
+        <div class="player-info">
+            <span class="player-song">good 4 u</span>
+            <span class="player-artist">Olivia Rodrigo</span>
+        </div>
+        <div class="player-progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="player-time">
+                <span class="current-time" id="currentTime">0:00</span>
+                <span class="total-time" id="totalTime">0:00</span>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button class="player-btn" id="floatingPlayBtn">
+                <span class="play-icon">▶</span>
+                <span class="pause-icon">❚❚</span>
+            </button>
+        </div>
+    </div>
 
     <!-- ═══════════════════════════════════════════════════════════════════ -->
     <!-- WELCOME INTRO SCREEN -->
@@ -164,74 +194,91 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About Me</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#gallery" class="nav-link">Activites</a></li>
+                <li><a href="myreflection.html" class="nav-link">My Reflection</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="music-toggle-item">
-                    <button class="music-toggle-btn" id="musicToggleBtn" title="Toggle Music">
-                        <span class="music-icon playing">🎵</span>
-                        <span class="music-icon muted">🔇</span>
-                        <span class="toggle-text">Music</span>
-                    </button>
-                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Header Section -->
     <header id="home" class="hero">
-        <div class="hero-container">
-            <!-- Left Photo -->
-            <div class="hero-side-photo left-photo">
-                <img src="About Me/pic1.jpg" alt="Andrea">
+        <div class="torn-paper-top"></div>
+        <div class="hero-content">
+            <div class="scrapbook-header">
+                <div class="tape tape-left"></div>
+                <div class="tape tape-right"></div>
+                <h1 class="cutout-title">
+                    <span class="letter l1">A</span><span class="letter l2">n</span><span class="letter l3">d</span><span class="letter l4">r</span><span class="letter l5">e</span><span class="letter l6">a</span>
+                    <span class="letter l7">V</span><span class="letter l8">.</span>
+                    <span class="letter l9">R</span><span class="letter l10">o</span><span class="letter l11">m</span><span class="letter l12">a</span><span class="letter l13">n</span><span class="letter l14">i</span><span class="letter l15">l</span><span class="letter l16">l</span><span class="letter l17">o</span><span class="letter l18">s</span>
+                </h1>
+                <p class="handwritten-subtitle">~ Future Math Educator ~</p>
+                <div class="doodle-border">
+                    <span>♡</span><span>✧</span><span>♡</span><span>✧</span><span>♡</span><span>✧</span><span>♡</span>
+                </div>
             </div>
             
-            <!-- Center Content -->
-            <div class="hero-center">
-                <!-- Decorative Sun Element -->
-                <div class="sun-decoration">
-                    <svg viewBox="0 0 100 100" class="sun-svg">
-                        <circle cx="50" cy="50" r="15" fill="currentColor"/>
-                        <g class="sun-rays">
-                            <line x1="50" y1="5" x2="50" y2="25"/>
-                            <line x1="50" y1="75" x2="50" y2="95"/>
-                            <line x1="5" y1="50" x2="25" y2="50"/>
-                            <line x1="75" y1="50" x2="95" y2="50"/>
-                            <line x1="18" y1="18" x2="32" y2="32"/>
-                            <line x1="68" y1="68" x2="82" y2="82"/>
-                            <line x1="82" y1="18" x2="68" y2="32"/>
-                            <line x1="32" y1="68" x2="18" y2="82"/>
-                            <line x1="50" y1="0" x2="50" y2="15"/>
-                            <line x1="50" y1="85" x2="50" y2="100"/>
-                            <line x1="0" y1="50" x2="15" y2="50"/>
-                            <line x1="85" y1="50" x2="100" y2="50"/>
-                        </g>
-                    </svg>
+            <!-- Enhanced Photo Gallery Display -->
+            <div class="hero-photo-gallery">
+                <!-- Left Side Polaroids -->
+                <div class="side-polaroids left-side">
+                    <div class="polaroid mini-polaroid tilt-left animate-float-1">
+                        <div class="polaroid-image">
+                            <img src="About Me/pic1.jpeg" alt="Andrea" class="profile-img">
+                        </div>
+                        <p class="polaroid-caption">slay 💅</p>
+                    </div>
+                    <div class="polaroid mini-polaroid tilt-right animate-float-2">
+                        <div class="polaroid-image">
+                            <img src="About Me/pic2.jpg" alt="Andrea" class="profile-img filter-warm">
+                        </div>
+                        <p class="polaroid-caption">vibes ✨</p>
+                    </div>
                 </div>
                 
-                <!-- Title -->
-                <h1 class="hero-title">Andrea Romanillos</h1>
+                <!-- Main Center Polaroid -->
+                <div class="hero-polaroid">
+                    <div class="polaroid main-polaroid glow-effect">
+                        <div class="polaroid-image">
+                            <img src="About Me/formalphotoofme.jpg" alt="Andrea V. Romanillos" class="profile-img">
+                        </div>
+                        <p class="polaroid-caption">dreamy ✨</p>
+                        <div class="polaroid-sparkles">
+                            <span>✨</span><span>💜</span><span>✨</span>
+                        </div>
+                    </div>
+                    <div class="floating-hearts">
+                        <span class="mini-heart">💗</span>
+                        <span class="mini-heart">💜</span>
+                        <span class="mini-heart">💕</span>
+                    </div>
+                </div>
                 
-                <!-- Subtitle -->
-                <p class="hero-subtitle">
-                    Aspiring Mathematics Educator with a passion<br>
-                    for nurturing young minds and inspiring<br>
-                    a love for numbers and problem-solving.<br>
-                    <em>Building the future, one equation at a time.</em>
-                </p>
-                
-                <!-- CTA Button -->
-                <a href="#about" class="hero-cta">LEARN MORE</a>
+                <!-- Right Side Polaroids -->
+                <div class="side-polaroids right-side">
+                    <div class="polaroid mini-polaroid tilt-right animate-float-3">
+                        <div class="polaroid-image">
+                            <img src="About Me/pic3.jpg" alt="Andrea" class="profile-img filter-cool">
+                        </div>
+                        <p class="polaroid-caption">purple haze 💜</p>
+                    </div>
+                    <div class="polaroid mini-polaroid tilt-left animate-float-4">
+                        <div class="polaroid-image">
+                            <img src="About Me/pic4.jpg" alt="Andrea" class="profile-img filter-vintage">
+                        </div>
+                        <p class="polaroid-caption">aesthetic 🦋</p>
+                    </div>
+                </div>
             </div>
             
-            <!-- Right Photo -->
-            <div class="hero-side-photo right-photo">
-                <img src="About Me/formalphotoofme.jpg" alt="Andrea">
+            <div class="sticker-decoration">
+                <span class="deco-sticker">🦋</span>
+                <span class="deco-sticker">💜</span>
+                <span class="deco-sticker">⭐</span>
             </div>
         </div>
-        
-        <!-- Decorative arch elements -->
-        <div class="arch-left"></div>
-        <div class="arch-right"></div>
+        <div class="torn-paper-bottom"></div>
     </header>
 
     <!-- About Section -->
@@ -255,7 +302,7 @@
                     <div class="frame-decoration top-right">🦋</div>
                     <div class="frame-decoration bottom-left">💜</div>
                     <div class="frame-decoration bottom-right">💗</div>
-                    <img src="About Me/formalphotoofme.jpg" alt="Andrea - Main Photo">
+                    <img src="About Me/formalphotogemini.png" alt="Andrea - Main Photo">
                     <div class="photo-overlay">
                         <span class="overlay-text">Andrea ✨</span>
                     </div>
@@ -268,22 +315,22 @@
                 <!-- Top Row -->
                 <div class="side-photo-row">
                     <div class="model-photo small tilt-left">
-                        <img src="About Me/pic1.jpg" alt="Andrea pic 1">
+                        <img src="About Me/8.JPG" alt="Andrea pic 1">
                         <span class="photo-tag">mood 💜</span>
                     </div>
                     <div class="model-photo medium tilt-right">
-                        <img src="About Me/pic2.jpg" alt="Andrea pic 2">
+                        <img src="About Me/5.png" alt="Andrea pic 2">
                         <span class="photo-tag">slay ✨</span>
                     </div>
                 </div>
                 <!-- Bottom Row -->
                 <div class="side-photo-row">
                     <div class="model-photo medium tilt-left">
-                        <img src="About Me/pic3.jpg" alt="Andrea pic 3">
+                        <img src="About Me/6.png" alt="Andrea pic 3">
                         <span class="photo-tag">iconic 🦋</span>
                     </div>
                     <div class="model-photo small tilt-right">
-                        <img src="About Me/pic4.jpg" alt="Andrea pic 4">
+                        <img src="About Me/7.JPG" alt="Andrea pic 4">
                         <span class="photo-tag">vibes 💗</span>
                     </div>
                 </div>
@@ -295,16 +342,16 @@
             <div class="strip-label">📸 more moments</div>
             <div class="model-strip-photos">
                 <div class="strip-item">
-                    <img src="About Me/pic5.jpg" alt="Andrea pic 5">
+                    <img src="About Me/1.jpeg" alt="Andrea pic 5">
                 </div>
                 <div class="strip-item">
-                    <img src="About Me/pic1.jpg" alt="Andrea pic 1">
+                    <img src="About Me/3.jpeg" alt="Andrea pic 1">
                 </div>
                 <div class="strip-item">
-                    <img src="About Me/pic2.jpg" alt="Andrea pic 2">
+                    <img src="About Me/2.jpeg" alt="Andrea pic 2">
                 </div>
                 <div class="strip-item featured">
-                    <img src="About Me/formalphotoofme.jpg" alt="Andrea featured">
+                    <img src="About Me/4.jpeg" alt="Andrea featured">
                     <span class="featured-badge">⭐</span>
                 </div>
             </div>
@@ -408,7 +455,7 @@
                     <div class="polaroid-image">
                         <div class="placeholder-image">📖</div>
                     </div>
-                    <p class="polaroid-caption">Elementary</p>
+                    <p class="polaroid-caption">SLES</p>
                 </div>
                 <div class="timeline-content">
                     <h3>San Luis Elementary School</h3>
@@ -476,7 +523,7 @@
                         <span class="date-month">AUG</span>
                     </div>
                     <h3 class="event-title">Buwan ng Wika 📚</h3>
-                    <p class="event-description">Celebrating Filipino Language and Culture</p>
+                    <p class="event-description">Paglinang sa Filipino at Katutubong Wika: Makasaysayan sa Pagkakaisa ng Bansa</p>
                 </div>
                 <div class="event-preview">
                     <img src="midterms-events/buwan-ng-wika/1.jpg" alt="Buwan ng Wika">
@@ -496,7 +543,7 @@
                         <span class="date-month">SEPT</span>
                     </div>
                     <h3 class="event-title">DO Day - Research Surveying 🔬</h3>
-                    <p class="event-description">Research surveying activity in D.Q</p>
+                    <p class="event-description">CNSC - Abaño Campus & D.Q Liwag National High School</p>
                 </div>
                 <div class="event-preview">
                     <img src="midterms-events/do-day-research/1.jpg" alt="DO Day">
@@ -515,8 +562,8 @@
                         <span class="date-day">10</span>
                         <span class="date-month">SEPT</span>
                     </div>
-                    <h3 class="event-title">ICT & AI in Classroom 💻</h3>
-                    <p class="event-description">Group Experiential Learning Task - Use of ICT and AI</p>
+                    <h3 class="event-title">Group Experiential Learning Task #1 💻</h3>
+                    <p class="event-description">Use of ICT and AI in the Classroom</p>
                 </div>
                 <div class="event-preview">
                     <img src="midterms-events/experiential-learning/1.jpeg" alt="ICT Activity">
@@ -535,7 +582,7 @@
                         <span class="date-day">15-19</span>
                         <span class="date-month">SEPT</span>
                     </div>
-                    <h3 class="event-title">Intercollegiate Meet 2025 🏆</h3>
+                    <h3 class="event-title">Pasiklaban Intercollegiate Meet 🏆</h3>
                     <p class="event-description">Sports and academic competition between colleges</p>
                 </div>
                 <div class="event-preview">
@@ -555,11 +602,11 @@
                         <span class="date-day">01</span>
                         <span class="date-month">OCT</span>
                     </div>
-                    <h3 class="event-title">A.I Activity 🤖</h3>
+                    <h3 class="event-title">Prompt Engineering 🤖</h3>
                     <p class="event-description">Exploring Artificial Intelligence in Education</p>
                 </div>
                 <div class="event-preview">
-                    <img src="midterms-events/ai-activity/1.png" alt="AI Activity">
+                    <img src="midterms-events/ai-activity/1.jpg" alt="AI Activity">
                     <div class="preview-overlay">
                         <span class="preview-text">Click to View 📷</span>
                     </div>
@@ -595,7 +642,7 @@
                         <span class="date-day">08</span>
                         <span class="date-month">OCT</span>
                     </div>
-                    <h3 class="event-title">Summative Test 📝</h3>
+                    <h3 class="event-title">Summative Test Examination 📝</h3>
                     <p class="event-description">Assessment and evaluation period</p>
                 </div>
                 <div class="event-preview">
@@ -615,11 +662,31 @@
                         <span class="date-day">10</span>
                         <span class="date-month">OCT</span>
                     </div>
-                    <h3 class="event-title">Midterm Exam 📖</h3>
+                    <h3 class="event-title">Midterm Test Examination 📖</h3>
                     <p class="event-description">Midterm examination period</p>
                 </div>
                 <div class="event-preview">
                     <img src="midterms-events/midterm-exam/1.jpg" alt="Midterm Exam">
+                    <div class="preview-overlay">
+                        <span class="preview-text">Click to View 📷</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midterm Event 9: Oct 20 - Infographic -->
+            <div class="event-card" data-event="infograph" onclick="openEventModal('infograph')">
+                <div class="event-header">
+                    <div class="tape tape-left"></div>
+                    <div class="tape tape-right"></div>
+                    <div class="event-date-badge">
+                        <span class="date-day">20</span>
+                        <span class="date-month">OCT</span>
+                    </div>
+                    <h3 class="event-title">Creating an Infographic 🎨</h3>
+                    <p class="event-description">Disaster Readiness & Risk Reduction - Natural Hazard - Earthquake</p>
+                </div>
+                <div class="event-preview">
+                    <img src="midterms-events/infograph/1.png" alt="Infographic">
                     <div class="preview-overlay">
                         <span class="preview-text">Click to View 📷</span>
                     </div>
@@ -660,7 +727,7 @@
                         <span class="date-day">30</span>
                         <span class="date-month">OCT</span>
                     </div>
-                    <h3 class="event-title">Mental Health Awareness 🧠</h3>
+                    <h3 class="event-title">Everyday Actions, Stronger Minds 🧠</h3>
                     <p class="event-description">Little Things Matter: Everyday Actions for Mental Health</p>
                 </div>
                 <div class="event-preview">
@@ -680,7 +747,7 @@
                         <span class="date-day">03</span>
                         <span class="date-month">NOV</span>
                     </div>
-                    <h3 class="event-title">Dale's Cone Presentation 📐</h3>
+                    <h3 class="event-title">Dale's Cone of Experience Presentation 📐</h3>
                     <p class="event-description">Understanding Edgar Dale's Cone of Experience</p>
                 </div>
                 <div class="event-preview">
@@ -744,7 +811,7 @@
                     <p class="event-description">Deal or No Deal - TPACK Framework Discussion</p>
                 </div>
                 <div class="event-preview">
-                    <img src="finals-events/week-talk/1.jpg" alt="Week Talk">
+                    <img src="finals-events/week-talk/1.png" alt="Week Talk">
                     <div class="preview-overlay">
                         <span class="preview-text">Click to View 📷</span>
                     </div>
@@ -822,7 +889,7 @@
                 <span class="contact-label">Phone</span>
                 <span class="contact-info">0967-880-0931</span>
             </a>
-            <a href="https://facebook.com" target="_blank" class="contact-card sticker-btn">
+            <a href="https://www.facebook.com/xthallia" target="_blank" class="contact-card sticker-btn">
                 <span class="contact-icon">💙</span>
                 <span class="contact-label">Facebook</span>
                 <span class="contact-info">Andrea Valencia</span>
@@ -841,7 +908,7 @@
             <span>✨</span><span>🦋</span><span>💜</span><span>⭐</span><span>💗</span><span>✨</span><span>🦋</span><span>💜</span><span>⭐</span><span>💗</span>
         </div>
         <p class="footer-text">Made with 💜 by Andrea V. Romanillos</p>
-        <p class="footer-year">© 2025 | Sour Cream Aesthetic ✨</p>
+        <p class="footer-year">© 2025 | Sour Theme Aesthetic ✨</p>
         <div class="footer-decoration">
             <span>💗</span><span>⭐</span><span>💜</span><span>🦋</span><span>✨</span><span>💗</span><span>⭐</span><span>💜</span><span>🦋</span><span>✨</span>
         </div>

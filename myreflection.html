@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reflection | Andrea V. Romanillos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&family=Patrick+Hand&family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        /* Page background */
+        body {
+            background: url('Background/myreflectionbg.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .reflection-section {
+            padding: 100px 20px 60px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.3rem;
+            color: #9b59b6;
+            text-decoration: none;
+            padding: 12px 25px;
+            background: #fff;
+            border-radius: 50px;
+            border: 2px solid rgba(155, 89, 182, 0.3);
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(155, 89, 182, 0.1);
+        }
+
+        .back-link:hover {
+            background: #9b59b6;
+            color: #fff;
+            transform: translateX(-5px);
+        }
+
+        /* Single Diary Note Design */
+        .diary-note {
+            background: linear-gradient(180deg, #fdfcff 0%, #fff 100%);
+            border-radius: 20px;
+            padding: 50px 55px;
+            position: relative;
+            box-shadow: 
+                0 10px 40px rgba(155, 89, 182, 0.12),
+                0 0 0 1px rgba(200, 162, 200, 0.2);
+        }
+
+        /* Decorative corner elements */
+        .diary-note::before {
+            content: '✨';
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-size: 1.3rem;
+            opacity: 0.6;
+        }
+
+        .diary-note::after {
+            content: '🦋';
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 1.3rem;
+            opacity: 0.6;
+        }
+
+        /* Tape decoration at top */
+        .tape-decor {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 28px;
+            background: linear-gradient(45deg, rgba(200, 162, 200, 0.5), rgba(255, 182, 193, 0.5));
+            border-radius: 3px;
+        }
+
+        /* Title styling */
+        .note-title {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2rem;
+            color: #9b59b6;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .note-subtitle {
+            font-family: 'Caveat', cursive;
+            font-size: 1.4rem;
+            color: #8e44ad;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .title-deco {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Content paragraphs */
+        .note-content p {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.15rem;
+            line-height: 2;
+            color: #4a4a4a;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .note-content p strong {
+            color: #9b59b6;
+        }
+
+        /* Section dividers */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        .section-divider span {
+            color: #c8a2c8;
+        }
+
+        /* Quote styling */
+        .note-quote {
+            background: linear-gradient(135deg, rgba(200, 162, 200, 0.15) 0%, rgba(255, 182, 193, 0.15) 100%);
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 4px solid #c8a2c8;
+        }
+
+        .note-quote p {
+            font-family: 'Caveat', cursive !important;
+            font-size: 1.5rem !important;
+            color: #8e44ad !important;
+            font-style: italic;
+            text-align: center !important;
+            margin-bottom: 10px !important;
+        }
+
+        .note-quote .author {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.1rem;
+            color: #9b59b6;
+            text-align: center;
+            display: block;
+        }
+
+        /* Bottom doodles */
+        .note-doodles {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 30px;
+            font-size: 1.1rem;
+            opacity: 0.6;
+        }
+
+        /* Floating decorations */
+        .floating-butterfly {
+            position: fixed;
+            font-size: 1.5rem;
+            opacity: 0.4;
+            animation: floatAround 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .floating-butterfly.b1 { top: 20%; left: 5%; animation-delay: 0s; }
+        .floating-butterfly.b2 { top: 40%; right: 5%; animation-delay: 2s; }
+        .floating-butterfly.b3 { bottom: 30%; left: 8%; animation-delay: 4s; }
+
+        @keyframes floatAround {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        /* Footer Styles */
+        .scrapbook-footer {
+            background: linear-gradient(135deg, #e8d5f0 0%, #f5d5e0 50%, #c9a9d2 100%);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-decoration {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5rem;
+        }
+
+        .footer-decoration span {
+            display: inline-block;
+            animation: floatDeco 2s ease-in-out infinite;
+        }
+
+        .footer-decoration span:nth-child(even) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes floatDeco {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .footer-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: #5a4a6b;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        }
+
+        .footer-year {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1rem;
+            color: #5a4a6b;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        .footer-doodles {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.3rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating decorations -->
+    <span class="floating-butterfly b1">🦋</span>
+    <span class="floating-butterfly b2">✨</span>
+    <span class="floating-butterfly b3">💜</span>
+
+    <!-- Audio Element -->
+    <audio id="bgMusic" loop>
+        <source src="Song/Goodforyou.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">✨ Andrea ✨</span>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About Me</a></li>
+                <li><a href="index.html#education" class="nav-link">Education</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="myreflection.html" class="nav-link active">My Reflection</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Reflection Content -->
+    <main class="reflection-section">
+        <a href="index.html" class="back-link">
+            <span>←</span>
+            <span>Back to Home</span>
+            <span>🏠</span>
+        </a>
+
+        <!-- Single Diary Note -->
+        <div class="diary-note">
+            <div class="tape-decor"></div>
+            
+            <h1 class="note-title">My Reflection 💜</h1>
+            <p class="note-subtitle">PCK 2 Technology for Teaching and Learning 1</p>
+            <div class="title-deco">
+                <span>💜</span><span>📚</span><span>✨</span><span>🎓</span><span>💜</span>
+            </div>
+
+            <div class="note-content">
+                <p>
+                    In today's education, the integration of technology with mathematics teaching is essential for enhancing both understanding and engagement. As mathematical concepts evolve, so must our teaching methods, blending Pedagogical Content Knowledge (PCK) with innovative digital tools. <strong>PCK 2: Technology for Teaching and Learning 1</strong> has equipped me with the skills to navigate this intersection, preparing me to effectively use technology in teaching mathematics. ✨
+                </p>
+
+                <p>
+                    Throughout the PCK 2 course, I have learned the significance of pedagogical content knowledge (PCK) and how it directly influences our teaching methods. One of the most valuable aspects of this course was the emphasis on teaching strategies tailored for future educators like myself. Learning these strategies, especially how to blend traditional teaching methods with modern digital tools, was transformative. I appreciated how the course encouraged us to experiment with various digital tools to create instructional materials that are both engaging and effective. 💜
+                </p>
+
+                <div class="section-divider">
+                    <span>♡</span><span>✧</span><span>♡</span><span>✧</span><span>♡</span>
+                </div>
+
+                <p>
+                    Over the past five months, I have been fortunate to be guided by <strong>Sir Jake</strong>, whose approach to teaching extended far beyond the textbook. His passion and dedication to the subject were evident in every class session, and his ability to make the topics come alive kept us engaged and eager to participate. He not only covered theoretical aspects but also emphasized the practical application of technology in teaching. This holistic approach helped me connect theory with practice in meaningful ways, making the learning process both engaging and informative. 👨‍🏫✨
+                </p>
+
+                <p>
+                    The course activities were a great way to apply the concepts we learned. Tasks such as conducting a survey on the use of ICT and AI in the classroom, engaging in prompt engineering, creating infographics, and exploring Dale's Cone of Experience challenged me to think creatively. These activities were designed to stretch our abilities and encourage critical thinking, all while providing us with hands-on experience in using technology effectively. The experience of making an advocacy video and participating in Week Talks further refined my skills in communication and presentation. 📝🎬
+                </p>
+
+                <div class="section-divider">
+                    <span>✨</span><span>🦋</span><span>✨</span><span>🦋</span><span>✨</span>
+                </div>
+
+                <p>
+                    The use of technology in teaching is no longer optional—it's essential. The ability to integrate various tools and techniques to enhance learning experiences for students is a skill that I now feel more confident in. Each activity, while challenging, contributed to a deeper understanding of how digital tools can be leveraged in the classroom to promote student engagement and promote a more interactive and dynamic learning environment. 💻🌟
+                </p>
+
+                <p>
+                    As I conclude this e-portfolio, I am grateful for the lessons learned and the skills developed in <strong>PCK 2: Technology for Teaching and Learning 1</strong>. The course not only taught me the importance of technology in education but also inspired me to explore innovative ways to integrate it into my future teaching practice. I look forward to using the knowledge and skills I have gained as a future Mathematics Educator. 🎓💜
+                </p>
+
+                <div class="note-quote">
+                    <p>"Education is not the learning of facts, but the training of the mind to think."</p>
+                    <span class="author">— Albert Einstein 📚✨</span>
+                </div>
+
+                <p>
+                    This course has certainly trained my mind to think creatively about teaching, and I am excited to apply these insights to my future classroom. 💜✨🦋
+                </p>
+            </div>
+
+            <div class="note-doodles">
+                <span>♡</span>
+                <span>★</span>
+                <span>~</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="scrapbook-footer">
+        <div class="footer-content">
+            <div class="footer-decoration">
+                <span>✨</span><span>💜</span><span>🦋</span><span>💜</span><span>✨</span>
+            </div>
+            <p class="footer-text">Made with 💜 by Andrea V. Romanillos</p>
+            <p class="footer-year">© 2025 - All Rights Reserved</p>
+            <div class="footer-doodles">
+                <span>~</span><span>♡</span><span>~</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navbar = document.querySelector('.navbar');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Music Toggle
+        const bgMusic = document.getElementById('bgMusic');
+        const musicToggleBtn = document.getElementById('musicToggleBtn');
+        let isMusicPlaying = false;
+
+        // Set initial volume
+        if (bgMusic) {
+            bgMusic.volume = 0.5;
+        }
+
+        if (musicToggleBtn && bgMusic) {
+            musicToggleBtn.addEventListener('click', () => {
+                if (isMusicPlaying) {
+                    bgMusic.pause();
+                    musicToggleBtn.classList.add('muted');
+                    musicToggleBtn.classList.remove('playing');
+                } else {
+                    bgMusic.play().then(() => {
+                        musicToggleBtn.classList.remove('muted');
+                        musicToggleBtn.classList.add('playing');
+                    }).catch(err => {
+                        console.log('Audio play failed:', err);
+                    });
+                }
+                isMusicPlaying = !isMusicPlaying;
+            });
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

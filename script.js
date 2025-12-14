@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createAutoSparkles();
     initGalleryTabs();
     initSlideshows();
+    initFloatingPlayer();
 });
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -440,6 +441,112 @@ function initMusicToggle() {
     
     bgMusic.addEventListener('play', () => {
         musicToggleBtn.classList.remove('muted');
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// FLOATING MUSIC PLAYER
+// ═══════════════════════════════════════════════════════════════════════════
+function initFloatingPlayer() {
+    const floatingPlayer = document.getElementById('floatingPlayer');
+    const floatingPlayBtn = document.getElementById('floatingPlayBtn');
+    const bgMusic = document.getElementById('bgMusic');
+    const progressFill = document.getElementById('progressFill');
+    const currentTimeEl = document.getElementById('currentTime');
+    const totalTimeEl = document.getElementById('totalTime');
+    const progressBar = document.querySelector('.progress-bar');
+    
+    if (!floatingPlayer || !bgMusic) return;
+    
+    // Format time helper
+    function formatTime(seconds) {
+        if (isNaN(seconds)) return '0:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+    }
+    
+    // Show player after intro screens are done
+    let playerShown = false;
+    function showPlayer() {
+        if (!playerShown && !document.getElementById('musicIntro')?.classList.contains('hidden') === false) {
+            setTimeout(() => {
+                floatingPlayer.classList.add('visible');
+                playerShown = true;
+            }, 500);
+        }
+    }
+    
+    // Check if intros are done and show player
+    const checkIntros = setInterval(() => {
+        const musicIntro = document.getElementById('musicIntro');
+        const introOverlay = document.getElementById('introOverlay');
+        
+        if (musicIntro?.classList.contains('hidden') && introOverlay?.classList.contains('hidden')) {
+            floatingPlayer.classList.add('visible');
+            clearInterval(checkIntros);
+        }
+    }, 500);
+    
+    // Update player state based on audio
+    bgMusic.addEventListener('play', () => {
+        floatingPlayer.classList.add('playing');
+    });
+    
+    bgMusic.addEventListener('pause', () => {
+        floatingPlayer.classList.remove('playing');
+    });
+    
+    // Update time display
+    bgMusic.addEventListener('loadedmetadata', () => {
+        totalTimeEl.textContent = formatTime(bgMusic.duration);
+    });
+    
+    bgMusic.addEventListener('timeupdate', () => {
+        const progress = (bgMusic.currentTime / bgMusic.duration) * 100;
+        progressFill.style.width = `${progress}%`;
+        currentTimeEl.textContent = formatTime(bgMusic.currentTime);
+        
+        // Update total time if not set yet
+        if (totalTimeEl.textContent === '0:00' && bgMusic.duration) {
+            totalTimeEl.textContent = formatTime(bgMusic.duration);
+        }
+    });
+    
+    // Play/pause button
+    floatingPlayBtn.addEventListener('click', () => {
+        if (bgMusic.paused) {
+            bgMusic.play().catch(err => console.log('Audio play error:', err));
+        } else {
+            bgMusic.pause();
+        }
+    });
+    
+    // Click on progress bar to seek
+    progressBar.addEventListener('click', (e) => {
+        const rect = progressBar.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
+        const seekTime = (clickX / width) * bgMusic.duration;
+        bgMusic.currentTime = seekTime;
+    });
+    
+    // Hide when scrolling to top, show otherwise
+    let lastScrollY = 0;
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        
+        // Only manipulate visibility after intros are done
+        const musicIntro = document.getElementById('musicIntro');
+        const introOverlay = document.getElementById('introOverlay');
+        
+        if (musicIntro?.classList.contains('hidden') && introOverlay?.classList.contains('hidden')) {
+            if (scrollY > 100) {
+                floatingPlayer.classList.add('visible');
+            }
+        }
+        
+        lastScrollY = scrollY;
     });
 }
 
@@ -903,7 +1010,7 @@ const eventsData = {
         reflection: `On September 3, 2025, while our institution observed Do-Day, my research group and I were assigned to D.Q. Liwag National High School to administer our mathematics-related survey, strictly scheduled within the students' Mathematics periods as required by the school. This arrangement prevented us from returning to Abaño Campus to join the clean-up, so before leaving, we prepared and left cleaning materials as our modest contribution to the activity. The experience made me reflect on how academic commitments and community initiatives can overlap, requiring careful judgment in how we allocate our time and effort.`
     },
     'ict-ai': {
-        title: 'ICT & AI in Classroom 💻',
+        title: 'Group Experiential Learning Task #1 💻',
         date: 'September 10, 2025',
         images: [
             'midterms-events/experiential-learning/1.jpeg',
@@ -914,7 +1021,7 @@ const eventsData = {
         reflection: `Our first experiential learning task on September 10, 2025 involved creating and distributing a Google Forms survey to gather data on teachers' use of ICT and AI in the classroom. I developed the survey form while my groupmates helped disseminate it to various teachers, allowing us to collect responses efficiently. The findings revealed that many educators, especially in rural areas, have limited familiarity with ICT tools, face challenges with insufficient technological resources, and some remain hesitant to use AI due to concerns about overdependence. This experience broadened my understanding of the existing digital gaps within the teaching community and the importance of providing proper support to ensure equitable access to technology. Communicating with my former high school teachers also reminded me how digital platforms strengthen professional connections and simplify collaboration, reinforcing the value of technology when used thoughtfully and responsibly.`
     },
     'intrams': {
-        title: 'Intercollegiate Meet 2025 🏆',
+        title: 'Pasiklaban Intercollegiate Meet 🏆',
         date: 'September 15-19, 2025',
         images: [
             'midterms-events/intercollegiate-meet/1.jpg',
@@ -930,12 +1037,13 @@ const eventsData = {
         reflection: `The Pasiklaban Intercollegiate Meet 2025, held from September 15 to 19 in Camarines Norte State College, was a vibrant celebration of unity, talent, and school spirit as all nine departments—COED, CANR, COENG, CAS, COTT, CBPA, CFAST, CCMS, and Etienza—gathered to compete in a week-long showcase of skills. The opening day was filled with energy as each department proudly presented its flag, students wore their departmental shirts, and athletes paraded in their colorful uniforms to represent their academic homes. For the next several days, the competitions highlighted the dedication and discipline of the participants, and I genuinely enjoyed watching the events with my classmates as we supported our respective teams. The final day brought great pride to our department when the College of Education (COED) was declared the overall champion, a moment that strengthened my sense of belonging to the department. Reflecting on this experience, I realized that observing teamwork, strategy, and performance in a real-world setting deepened my understanding of how learning extends beyond the classroom: effective teaching, much like successful competitions, requires the thoughtful integration of content, learner needs, motivation, and supportive environment.`
     },
     'ai-activity': {
-        title: 'A.I Activity 🤖',
+        title: 'Prompt Engineering 🤖',
         date: 'October 1, 2025',
         images: [
-            'midterms-events/ai-activity/1.png',
+            'midterms-events/ai-activity/1.jpg',
             'midterms-events/ai-activity/2.png',
-            'midterms-events/ai-activity/3.png'
+            'midterms-events/ai-activity/3.jpg',
+            'midterms-events/ai-activity/4.png'
         ],
         reflection: `The AI Activity on October 1, 2025 introduced us to a range of modern digital tools that demonstrate how artificial intelligence can support students in completing academic tasks more efficiently and creatively. Sir Jake presented different AI platforms useful for designing presentations, enhancing images, developing e-portfolios, and producing other digital materials, all of which reflect the growing relevance of technology in the 21st-century learning environment. We explored Gemini, a powerful multimodal AI system capable of processing text, images, audio, video, and code, and I was able to generate sample AI-created photos during the session as you can see on the photos. We also discussed platforms such as Weebly, Wix, Canva, and MagicSchool, which offer accessible ways to design educational content and classroom materials. This experience made me appreciate how essential technological literacy has become for today's learners, as these tools not only simplify complex tasks but also expand opportunities for creativity, problem-solving, and self-directed learning.`
     },
@@ -950,7 +1058,7 @@ const eventsData = {
         reflection: `The Teacher's Day on October 2, 2025 was a simple yet meaningful celebration as our class surprised our adviser, Ma'am Analyn, to express our gratitude for her guidance and support. Sharing this moment with BSED Mathematics 3A reminded me of the positive impact that dedicated teachers have on our growth as students and future educators. The experience deepened my appreciation for the teaching profession and inspired me to carry the same passion, patience, and commitment in my own journey toward becoming a teacher.`
     },
     'summative-test': {
-        title: 'Summative Test 📝',
+        title: 'Summative Test Examination 📝',
         date: 'October 8, 2025',
         images: [
             'midterms-events/summative-test/1.jpg',
@@ -960,7 +1068,7 @@ const eventsData = {
         reflection: `The Summative Test Examination held on October 8, 2025 served as a meaningful reminder of the value of consistent effort and responsible learning. Knowing that almost all pre-service teachers passed and that Ms. Faye B. Batoon earned the highest score inspired me to stay focused and disciplined in my studies. The careful validation of the test items also highlighted the importance of fairness and reliability in assessments, which is essential in the field of education. This experience encouraged me to evaluate my own progress, strengthen the areas I find challenging, and continue striving toward academic growth and professional excellence.`
     },
     'midterm-exam': {
-        title: 'Midterm Exam 📖',
+        title: 'Midterm Test Examination 📖',
         date: 'October 10, 2025',
         images: [
             'midterms-events/midterm-exam/1.jpg',
@@ -968,6 +1076,15 @@ const eventsData = {
             'midterms-events/midterm-exam/3.jpg'
         ],
         reflection: `The Midterm Test Examination on October 10, 2025 made me reflect on my own progress and the effort I invested in preparing for it. Seeing the achievements of my classmates, especially the highest score earned by Ms. Janel Irish V. Pasatiempo, encouraged me to acknowledge both my strengths and the areas where I still need improvement. It reminded me that learning is a continuous process that requires focus, discipline, and consistency. This experience motivated me to push myself harder and aim for a higher score in the next examination. I realized that with better study habits, deeper understanding of the lessons, and a stronger commitment to my academic responsibilities, I can achieve better results. Moving forward, I am determined to improve, stay motivated, and strive for excellence in every assessment.`
+    },
+    'infograph': {
+        title: 'Creating an Infographic 🎨',
+        date: 'October 20, 2025',
+        images: [
+            'midterms-events/infograph/1.png',
+            'midterms-events/infograph/2.png'
+        ],
+        reflection: `On October 16, 2025, our group began planning an infographic based on the criteria given by Sir Jake. We chose the subject Disaster Readiness and Risk Reduction under the BPED SHS program, focusing on the lesson Natural Hazards. Among the different hazards, we selected earthquakes because several earthquakes recently occurred in the Philippines, making this topic very timely and relevant. We wanted our work to respond to real situations that people in our country are currently experiencing. In this subject, students from all strands can relate, because disaster readiness is important for everyone. As a group, we identified the essential information about earthquakes: what an earthquake is, its causes, and safety guidelines before, during, and after the shaking. We also included the basic contents of an emergency survival kit. Our goal was to create material that is easy to understand so that, after reading the infographic, people will have a clearer idea of what they should do in case an earthquake happens. We used Canva as our digital tool to design the infographic. This platform helped us organize text, icons, and colors in a way that highlights the most important safety tips. We made sure to include the lesson title, the main heading, the focused concept, the names of all group members, and the books and websites used as references. Before finalizing our work, we carefully reviewed Sir Jake's rubric so that our output would meet the expectations in terms of content accuracy, organization, creativity, and neatness. Although the deadline is on October 20, 2025, we decided to finish and submit earlier. This shows our sense of responsibility and gives us a better chance of receiving higher points. More importantly, this activity helped us understand that disaster readiness and risk reduction are not only classroom topics but also essential knowledge that can save lives.`
     },
     
     // FINALS EVENTS
@@ -987,7 +1104,7 @@ const eventsData = {
         reflection: `Attending the United Nations Day celebration on October 24, 2025 with the theme "Voices of Tomorrow: Empowering Communities for Global Change" made me reflect deeply on my responsibilities as a future educator. Seeing students use technology—such as digital presentations, background music, videos, and microphones—to share different cultures and global issues showed me how powerful these tools can be in giving learners a voice and helping them understand the world beyond the classroom. As a future teacher, I realized that Technology for Teaching and Learning 1 is not just about learning how to use tools, but about using them with purpose: to promote respect for diversity, encourage critical thinking, and inspire students to participate in solving real-life problems in their communities and in the world. The event reminded me that when I design future lessons and activities, I should use technology not only to make learning attractive, but also to guide my students to become compassionate, informed, and empowered members of a global society.`
     },
     'mental-health': {
-        title: 'Mental Health Awareness 🧠',
+        title: 'Everyday Actions, Stronger Minds 🧠',
         date: 'October 30, 2025',
         images: [
             'finals-events/mental-health-webinar/1.jpg',
@@ -996,7 +1113,7 @@ const eventsData = {
         reflection: `By attending the "Everyday Actions, Stronger Minds" webinar with the theme "Little Things Matter: Everyday Actions for Mental Health", I realized that caring for mental health is not only about big decisions or formal counseling, but also about the small, consistent choices I make every day. I learned that simple actions like pausing to breathe, checking in on myself and others, setting healthy boundaries, and practicing gratitude can slowly build emotional strength and resilience. The insights shared by Ms. Marie Angelica C. Paz, RPsy, RGC (the resource speaker) helped me understand that it is okay to feel overwhelmed at times, as long as I respond with kindness instead of self-criticism. As a future educator, this reminded me that creating a supportive classroom does not always require grand programs—sometimes, listening, encouraging, and modeling healthy habits can already make a meaningful difference in my students' well-being.`
     },
     'dales-cone': {
-        title: "Dale's Cone Presentation 📐",
+        title: "Dale's Cone of Experience Presentation 📐",
         date: 'November 3, 2025',
         images: [
             'finals-events/dales-cone/1.jpg',
@@ -1033,7 +1150,7 @@ const eventsData = {
         title: 'Week Talk 🎤',
         date: 'December 5, 2025',
         images: [
-            'finals-events/week-talk/1.jpg',
+            'finals-events/week-talk/1.png',
             'finals-events/week-talk/2.jpg',
             'finals-events/week-talk/3.jpg',
             'finals-events/week-talk/4.jpg',
